@@ -8,7 +8,7 @@ def __quicksort__(lista):
                 minimo = j
         lista[i], lista[minimo] = lista[minimo], lista[i]
 
-vals = [100,-7,12,37,2]
+vals = [50,-7,12,87,2]
 print(f"Antes da ordenação {vals}")
 __quicksort__(vals)
 print(f"Depois da ordenação {vals}")

@@ -59,7 +59,7 @@ class Administrador(Pessoa):
     def _mostrar_relatorio(self):
         print("\nMostrando Relatório")
         for i in (self.relatorio):
-            if i .__class__.__name__ == "Usuario":
+            if i .__class__.__name__ == "Usuario" and len(i.emprestimos) > 0:
                 print(f"Usuário: {i.nome}")
                 print(f"{i.emprestimos}\n")
             elif i.__class__.__name__ == "Livro" and i.acesso == "Sim":
@@ -88,6 +88,7 @@ class Livro(ItemBiblioteca):
 joab = Administrador("Joab",18,210)
 
 guilherme = joab._cadastrar_usuario("Guilherme",19,601)
+fabio = joab._cadastrar_usuario("Fábio",20,602)
 
 dracula = joab._cadastrar_livro("Drácula","Bram Stoker","1897","Sim")
 frankenstein = joab._cadastrar_livro("Frankenstein","Mary Shelley","1818","Sim")
